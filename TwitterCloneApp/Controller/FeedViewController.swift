@@ -15,9 +15,10 @@ class FeedViewController: UIViewController {
     
     // MARK: - Lifecycle
     
-    init(iconTabBar: UIImage) {
-        self.iconTabBar = iconTabBar
+    init(iconTabBar: UIImage?) {
+        self.iconTabBar = iconTabBar ?? UIImage()
         super.init(nibName: nil, bundle: nil)
+        tabBarItem.image = iconTabBar
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -26,8 +27,7 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .brown
-        tabBarItem.image = iconTabBar
+        view.backgroundColor = .white
     }
     
     // MARK: - Helpers

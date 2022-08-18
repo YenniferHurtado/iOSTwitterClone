@@ -29,7 +29,7 @@ public enum TwitterImages: String {
     case icTwitterLogoBlue = "ic_twitter_logo_blue"
     
     public var image: UIImage? {
-        UIImage(named: self.rawValue)
+        UIImage(named: rawValue)
     }
     
     public var imageAlwaysTemplate: UIImage? {

@@ -15,16 +15,24 @@ class MainTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViewControllersToTab()
+        setNavigationControllerToMain()
     }
     
     // MARK: - Helpers
     
-    private func setViewControllersToTab() {
-        
-        viewControllers = [FeedViewController(iconTabBar: TwitterImages.icDownArrow.image!),
-                           ExploreViewController(iconTabBar: TwitterImages.icComment.image!),
-                           MessageViewController(iconTabBar: TwitterImages.icLike.image!),
-                           NotificationViewController(iconTabBar: TwitterImages.icShare.image!)]
+    private func setNavigationControllerToMain() {
+
+        viewControllers = setViewControllersToNavigation(
+            viewControllers: [FeedViewController(iconTabBar: TwitterImages.icHomeUnselected.image),
+                              ExploreViewController(iconTabBar: TwitterImages.icSearchUnselected.image),
+                              MessageViewController(iconTabBar: TwitterImages.icLikeUnselected.image),
+                              NotificationViewController(iconTabBar: TwitterImages.icLikeUnselected.image)])
     }
+    
+    private func setViewControllersToNavigation(viewControllers: [UIViewController]) -> [UINavigationController] {
+        let navigationControllers = viewControllers.compactMap{ UINavigationController(rootViewController: $0) }
+        return navigationControllers
+    }
+    
 }
+

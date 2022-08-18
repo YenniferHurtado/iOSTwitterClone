@@ -15,9 +15,10 @@ class NotificationViewController: UIViewController {
 
     // MARK: - Lifecycle
     
-    init(iconTabBar: UIImage) {
-        self.iconTabBar = iconTabBar
+    init(iconTabBar: UIImage?) {
+        self.iconTabBar = iconTabBar ?? UIImage()
         super.init(nibName: nil, bundle: nil)
+        tabBarItem.image = iconTabBar
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -26,8 +27,7 @@ class NotificationViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
-        tabBarItem.image = iconTabBar
+        view.backgroundColor = .white
     }
     
     // MARK: - Helpers
