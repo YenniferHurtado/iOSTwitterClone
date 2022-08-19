@@ -21,12 +21,11 @@ class MainTabBarViewController: UITabBarController {
     // MARK: - Helpers
     
     private func setNavigationControllerToMain() {
-
         viewControllers = setViewControllersToNavigation(
             viewControllers: [FeedViewController(iconTabBar: TwitterImages.icHomeUnselected.image),
                               ExploreViewController(iconTabBar: TwitterImages.icSearchUnselected.image),
-                              MessageViewController(iconTabBar: TwitterImages.icLikeUnselected.image),
-                              NotificationViewController(iconTabBar: TwitterImages.icLikeUnselected.image)])
+                              NotificationViewController(iconTabBar: TwitterImages.icLikeUnselected.image),
+                              MessageViewController(iconTabBar: TwitterImages.icMailSmall.image)])
     }
     
     private func setViewControllersToNavigation(viewControllers: [UIViewController]) -> [UINavigationController] {

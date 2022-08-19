@@ -11,8 +11,16 @@ class FeedViewController: UIViewController {
 
     // MARK: - Properties
     
-    let iconTabBar: UIImage
-    
+    private let iconTabBar: UIImage
+
+    private lazy var mainLogoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = TwitterImages.icTwitterLogoBlue.image
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+        
     // MARK: - Lifecycle
     
     init(iconTabBar: UIImage?) {
@@ -27,8 +35,13 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        configureUI()
     }
     
     // MARK: - Helpers
+    
+    private func configureUI() {
+        navigationItem.titleView = mainLogoImageView
+    }
+    
 }

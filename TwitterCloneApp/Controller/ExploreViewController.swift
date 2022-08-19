@@ -27,7 +27,7 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        navigationItem.title = Localizable.explore_nav_title.localized
     }
     
     // MARK: - Helpers

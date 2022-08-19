@@ -18,6 +18,9 @@
 		CE83315828AC56A300D8E9EE /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83315728AC56A300D8E9EE /* NotificationViewController.swift */; };
 		CE83315A28AC56B500D8E9EE /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83315928AC56B500D8E9EE /* MessageViewController.swift */; };
 		CE83315C28AC5C1D00D8E9EE /* TwitterImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83315B28AC5C1D00D8E9EE /* TwitterImages.swift */; };
+		CE83316F28B00D1600D8E9EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE83317128B00D1600D8E9EE /* Localizable.strings */; };
+		CE83317428B02EF800D8E9EE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83317328B02EF800D8E9EE /* Strings.swift */; };
+		CE83317728B0304200D8E9EE /* LocalizablesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83317628B0304200D8E9EE /* LocalizablesEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,10 @@
 		CE83315728AC56A300D8E9EE /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		CE83315928AC56B500D8E9EE /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		CE83315B28AC5C1D00D8E9EE /* TwitterImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterImages.swift; sourceTree = "<group>"; };
+		CE83317028B00D1600D8E9EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE83317228B00D2900D8E9EE /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CE83317328B02EF800D8E9EE /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		CE83317628B0304200D8E9EE /* LocalizablesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizablesEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +73,8 @@
 		CE83313428AC510300D8E9EE /* TwitterCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE83317828B0305100D8E9EE /* Translation */,
+				CE83317528B02F0A00D8E9EE /* Extensions */,
 				CE83314E28AC515F00D8E9EE /* Utils */,
 				CE83314D28AC515800D8E9EE /* API */,
 				CE83314C28AC515100D8E9EE /* Model */,
@@ -130,6 +139,23 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		CE83317528B02F0A00D8E9EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE83317328B02EF800D8E9EE /* Strings.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE83317828B0305100D8E9EE /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				CE83317628B0304200D8E9EE /* LocalizablesEnum.swift */,
+				CE83317128B00D1600D8E9EE /* Localizable.strings */,
+			);
+			path = Translation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +198,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = CE83312928AC510300D8E9EE;
 			productRefGroup = CE83313328AC510300D8E9EE /* Products */;
@@ -189,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE83315228AC53E600D8E9EE /* Main.storyboard in Resources */,
+				CE83316F28B00D1600D8E9EE /* Localizable.strings in Resources */,
 				CE83314228AC510400D8E9EE /* LaunchScreen.storyboard in Resources */,
 				CE83313F28AC510400D8E9EE /* Assets.xcassets in Resources */,
 			);
@@ -201,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE83317728B0304200D8E9EE /* LocalizablesEnum.swift in Sources */,
 				CE83313628AC510300D8E9EE /* AppDelegate.swift in Sources */,
+				CE83317428B02EF800D8E9EE /* Strings.swift in Sources */,
 				CE83315028AC52C500D8E9EE /* MainTabBarViewController.swift in Sources */,
 				CE83315828AC56A300D8E9EE /* NotificationViewController.swift in Sources */,
 				CE83315C28AC5C1D00D8E9EE /* TwitterImages.swift in Sources */,
@@ -223,6 +253,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		CE83317128B00D1600D8E9EE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE83317028B00D1600D8E9EE /* en */,
+				CE83317228B00D2900D8E9EE /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -230,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -290,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

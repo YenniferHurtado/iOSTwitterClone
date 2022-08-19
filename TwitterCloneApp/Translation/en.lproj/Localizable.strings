@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  TwitterCloneApp
+
+  Created by Yennifer Hurtado Arce on 19/08/22.
+  
+*/
+
+"explore_nav_title" = "Explore";
+"notification_nav_title" = "Notification";
+"messages_nav_title" = "Messages";

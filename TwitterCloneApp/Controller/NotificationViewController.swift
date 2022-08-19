@@ -27,7 +27,7 @@ class NotificationViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        navigationItem.title = Localizable.notification_nav_title.localized
     }
     
     // MARK: - Helpers
