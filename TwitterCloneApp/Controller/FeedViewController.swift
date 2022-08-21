@@ -38,9 +38,13 @@ class FeedViewController: UIViewController {
         configureUI()
     }
     
+}
+
+private extension FeedViewController {
+    
     // MARK: - Helpers
     
-    private func configureUI() {
+    func configureUI() {
         navigationItem.titleView = mainLogoImageView
     }
     
