@@ -11,7 +11,7 @@ class MessageViewController: UIViewController {
 
     // MARK: - Properties
     
-    let iconTabBar: UIImage
+    private let iconTabBar: UIImage
 
     // MARK: - Lifecycle
     

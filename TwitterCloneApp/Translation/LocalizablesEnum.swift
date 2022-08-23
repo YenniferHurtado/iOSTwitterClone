@@ -6,6 +6,10 @@
 //
 
 enum Localizable {
+    //MARK: Login View
+    static let email_placeholder = "email_placeholder"
+    static let password_placeholder = "password_placeholder"
+
     //MARK: Explore View
     static let explore_nav_title: String = "explore_nav_title"
     //MARK: Notification View

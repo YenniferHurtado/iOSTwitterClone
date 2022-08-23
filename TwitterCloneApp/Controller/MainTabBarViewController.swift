@@ -11,11 +11,14 @@ class MainTabBarViewController: UITabBarController {
 
     // MARK: - Properties
     
-    let actionButton: UIButton = {
+    private let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
         button.backgroundColor = .twitterBlue
         button.setImage(TwitterImages.icNewTweet.image, for: .normal)
+        button.addTarget(MainTabBarViewController.self,
+                         action: #selector(actionButtonTapped),
+                         for: .touchUpInside)
         return button
     }()
     
@@ -28,6 +31,15 @@ class MainTabBarViewController: UITabBarController {
         setLayouts()
     }
     
+}
+
+// MARK: - Selectors
+
+private extension MainTabBarViewController {
+
+    @objc func actionButtonTapped() {
+        
+    }
 }
 
 // MARK: - Helpers

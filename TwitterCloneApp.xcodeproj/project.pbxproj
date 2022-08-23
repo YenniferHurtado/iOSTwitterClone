@@ -24,6 +24,11 @@
 		CE83317A28B0406500D8E9EE /* UIViewLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83317928B0406500D8E9EE /* UIViewLayouts.swift */; };
 		CE83317C28B0408700D8E9EE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83317B28B0408700D8E9EE /* UIColor.swift */; };
 		CE83317E28B2AD1300D8E9EE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83317D28B2AD1300D8E9EE /* UIView.swift */; };
+		CE83318128B2B59D00D8E9EE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318028B2B59D00D8E9EE /* LoginViewController.swift */; };
+		CE83318328B2B63E00D8E9EE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318228B2B63E00D8E9EE /* RegistrationViewController.swift */; };
+		CE83318528B42B2200D8E9EE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318428B42B2200D8E9EE /* Date.swift */; };
+		CE83318728B57B6300D8E9EE /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318628B57B6300D8E9EE /* Components.swift */; };
+		CE83318928B587DD00D8E9EE /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318828B587DD00D8E9EE /* UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +52,11 @@
 		CE83317928B0406500D8E9EE /* UIViewLayouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLayouts.swift; sourceTree = "<group>"; };
 		CE83317B28B0408700D8E9EE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CE83317D28B2AD1300D8E9EE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		CE83318028B2B59D00D8E9EE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE83318228B2B63E00D8E9EE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		CE83318428B42B2200D8E9EE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		CE83318628B57B6300D8E9EE /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		CE83318828B587DD00D8E9EE /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,7 @@
 		CE83314928AC513F00D8E9EE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE83317F28B2B58000D8E9EE /* Authentication */,
 				CE83314F28AC52C500D8E9EE /* MainTabBarViewController.swift */,
 				CE83315328AC565300D8E9EE /* FeedViewController.swift */,
 				CE83315528AC568800D8E9EE /* ExploreViewController.swift */,
@@ -141,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				CE83315B28AC5C1D00D8E9EE /* TwitterImages.swift */,
+				CE83318628B57B6300D8E9EE /* Components.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -152,6 +164,8 @@
 				CE83317B28B0408700D8E9EE /* UIColor.swift */,
 				CE83317928B0406500D8E9EE /* UIViewLayouts.swift */,
 				CE83317D28B2AD1300D8E9EE /* UIView.swift */,
+				CE83318428B42B2200D8E9EE /* Date.swift */,
+				CE83318828B587DD00D8E9EE /* UIFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +177,15 @@
 				CE83317128B00D1600D8E9EE /* Localizable.strings */,
 			);
 			path = Translation;
+			sourceTree = "<group>";
+		};
+		CE83317F28B2B58000D8E9EE /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CE83318028B2B59D00D8E9EE /* LoginViewController.swift */,
+				CE83318228B2B63E00D8E9EE /* RegistrationViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,19 +261,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE83318128B2B59D00D8E9EE /* LoginViewController.swift in Sources */,
 				CE83317E28B2AD1300D8E9EE /* UIView.swift in Sources */,
 				CE83317728B0304200D8E9EE /* LocalizablesEnum.swift in Sources */,
+				CE83318528B42B2200D8E9EE /* Date.swift in Sources */,
 				CE83317C28B0408700D8E9EE /* UIColor.swift in Sources */,
 				CE83317A28B0406500D8E9EE /* UIViewLayouts.swift in Sources */,
 				CE83313628AC510300D8E9EE /* AppDelegate.swift in Sources */,
 				CE83317428B02EF800D8E9EE /* Strings.swift in Sources */,
+				CE83318928B587DD00D8E9EE /* UIFont.swift in Sources */,
 				CE83315028AC52C500D8E9EE /* MainTabBarViewController.swift in Sources */,
 				CE83315828AC56A300D8E9EE /* NotificationViewController.swift in Sources */,
+				CE83318328B2B63E00D8E9EE /* RegistrationViewController.swift in Sources */,
 				CE83315C28AC5C1D00D8E9EE /* TwitterImages.swift in Sources */,
 				CE83315628AC568800D8E9EE /* ExploreViewController.swift in Sources */,
 				CE83315428AC565300D8E9EE /* FeedViewController.swift in Sources */,
 				CE83313828AC510300D8E9EE /* SceneDelegate.swift in Sources */,
 				CE83315A28AC56B500D8E9EE /* MessageViewController.swift in Sources */,
+				CE83318728B57B6300D8E9EE /* Components.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,11 @@
   
 */
 
+//MARK: Login View
+"email_placeholder" = "Email";
+"password_placeholder" = "Password";
+
+//MARK: Explore View
 "explore_nav_title" = "Explorar";
 "notification_nav_title" = "Notificaciones";
 "messages_nav_title" = "Mensajes";
