@@ -1,16 +1,14 @@
 //
-//  LoginViewController.swift
+//  LoginView.swift
 //  TwitterCloneApp
 //
-//  Created by Yennifer Hurtado Arce on 21/08/22.
+//  Created by Yennifer Hurtado Arce on 25/08/22.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
-    // MARK: - Properties
-
+class LoginView: UIView {
+    
     private let mainLogoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -22,7 +20,7 @@ class LoginViewController: UIViewController {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 8
+        stackView.spacing = 20
         return stackView
     }()
     
@@ -53,48 +51,38 @@ class LoginViewController: UIViewController {
         return textField
     }()
     
-    // MARK: - Lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         configureUI()
         addSubViews()
         setLayouts()
     }
-
-}
-
-// MARK: - Selectors
-
-private extension LoginViewController {
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 }
 
-// MARK: - Helpers
-
-// MARK: - Layouts
-
-private extension LoginViewController {
+private extension LoginView {
     
     func configureUI() {
-        view.backgroundColor = .twitterBlue
+        backgroundColor = .twitterBlue
     }
     
     func setLayouts() {
-        mainLogoImageView.centerX(inView: view,
-                                  topAnchor: view.safeAreaLayoutGuide.topAnchor)
+        mainLogoImageView.centerX(inView: self,
+                                  topAnchor: safeAreaLayoutGuide.topAnchor)
         stackView.anchor(top: mainLogoImageView.bottomAnchor,
-                         left: view.leftAnchor,
-                         right: view.rightAnchor,
-                         height: 100)
+                         left: leftAnchor, paddingLeft: 16,
+                         right: rightAnchor, paddingRight: 16,
+                         height: 120)
     }
     
     func addSubViews() {
-        view.addSubview(mainLogoImageView)
-        view.addSubview(stackView)
+        addSubview(mainLogoImageView)
+        addSubview(stackView)
         stackView.addArrangedSubview(emailContainerView)
         stackView.addArrangedSubview(passwordContainerView)
     }
 }
-
-

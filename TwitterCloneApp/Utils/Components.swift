@@ -13,7 +13,7 @@ class Components {
                             textfield: UITextField) -> UIView {
         let view = UIView()
         let imageView = UIImageView()
-
+        
         view.addSubview(imageView)
         view.addSubview(textfield)
         
@@ -28,6 +28,8 @@ class Components {
                          left: imageView.rightAnchor, paddingLeft: 8,
                          right: view.rightAnchor)
         textfield.centerY(inView: view)
+        
+        view.addBorder(toSide: .top, withColor: UIColor.white.cgColor, andThickness: 20)
         
         return view
     }

@@ -29,6 +29,7 @@
 		CE83318528B42B2200D8E9EE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318428B42B2200D8E9EE /* Date.swift */; };
 		CE83318728B57B6300D8E9EE /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318628B57B6300D8E9EE /* Components.swift */; };
 		CE83318928B587DD00D8E9EE /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318828B587DD00D8E9EE /* UIFont.swift */; };
+		CE83318D28B7C03200D8E9EE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318C28B7C03200D8E9EE /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		CE83318428B42B2200D8E9EE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		CE83318628B57B6300D8E9EE /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		CE83318828B587DD00D8E9EE /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		CE83318C28B7C03200D8E9EE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,10 +184,27 @@
 		CE83317F28B2B58000D8E9EE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				CE83318028B2B59D00D8E9EE /* LoginViewController.swift */,
-				CE83318228B2B63E00D8E9EE /* RegistrationViewController.swift */,
+				CE83318B28B7C01F00D8E9EE /* Registration */,
+				CE83318A28B7C00300D8E9EE /* Login */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CE83318A28B7C00300D8E9EE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE83318028B2B59D00D8E9EE /* LoginViewController.swift */,
+				CE83318C28B7C03200D8E9EE /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CE83318B28B7C01F00D8E9EE /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				CE83318228B2B63E00D8E9EE /* RegistrationViewController.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +296,7 @@
 				CE83315628AC568800D8E9EE /* ExploreViewController.swift in Sources */,
 				CE83315428AC565300D8E9EE /* FeedViewController.swift in Sources */,
 				CE83313828AC510300D8E9EE /* SceneDelegate.swift in Sources */,
+				CE83318D28B7C03200D8E9EE /* LoginView.swift in Sources */,
 				CE83315A28AC56B500D8E9EE /* MessageViewController.swift in Sources */,
 				CE83318728B57B6300D8E9EE /* Components.swift in Sources */,
 			);
