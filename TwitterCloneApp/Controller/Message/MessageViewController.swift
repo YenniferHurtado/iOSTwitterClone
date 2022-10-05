@@ -1,5 +1,5 @@
 //
-//  ExploreViewController.swift
+//  MessageViewController.swift
 //  TwitterCloneApp
 //
 //  Created by Yennifer Hurtado Arce on 16/08/22.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ExploreViewController: UIViewController {
+class MessageViewController: UIViewController {
 
     // MARK: - Properties
-
+    
     private let iconTabBar: UIImage
 
     // MARK: - Lifecycle
@@ -27,8 +27,10 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = Localizable.explore_nav_title.localized
+        view.backgroundColor = .white
+        navigationItem.title = Localizable.messages_nav_title.localized
     }
     
     // MARK: - Helpers
+
 }

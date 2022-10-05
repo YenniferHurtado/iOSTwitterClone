@@ -1,5 +1,5 @@
 //
-//  MessageViewController.swift
+//  NotificationViewController.swift
 //  TwitterCloneApp
 //
 //  Created by Yennifer Hurtado Arce on 16/08/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MessageViewController: UIViewController {
+class NotificationViewController: UIViewController {
 
     // MARK: - Properties
     
@@ -24,12 +24,12 @@ class MessageViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = Localizable.messages_nav_title.localized
+        view.backgroundColor = .white
+        navigationItem.title = Localizable.notification_nav_title.localized
     }
     
     // MARK: - Helpers
-
 }

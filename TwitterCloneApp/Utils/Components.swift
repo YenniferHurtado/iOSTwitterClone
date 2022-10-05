@@ -9,13 +9,15 @@ import UIKit
 
 class Components {
     
-    func inputContainerView(withImage image: UIImage?,
-                            textfield: UITextField) -> UIView {
+    class func inputContainerLoginView(withImage image: UIImage?,
+                                       textfield: UITextField) -> UIView {
         let view = UIView()
         let imageView = UIImageView()
+        let bottomBorderView = UIView()
         
         view.addSubview(imageView)
         view.addSubview(textfield)
+        view.addSubview(bottomBorderView)
         
         view.anchor(height: 50)
         
@@ -29,20 +31,36 @@ class Components {
                          right: view.rightAnchor)
         textfield.centerY(inView: view)
         
-        view.addBorder(toSide: .top, withColor: UIColor.white.cgColor, andThickness: 20)
-        
+        bottomBorderView.backgroundColor = .white
+        bottomBorderView.anchor(bottom: view.bottomAnchor,
+                                left: view.leftAnchor, paddingLeft: 8,
+                                right: view.rightAnchor, height: 0.75)        
         return view
     }
     
-    func textField(withPlaceholder placeholder: String) -> UITextField {
+    class func textFieldLoginView(withPlaceholder placeholder: String) -> UITextField {
         let textField = UITextField()
         textField.textColor = .white
         textField.font = .callout
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-
         return textField
     }
-
+    
+    class func attributedButton(_ firstPart: String, _ secondPart: String) -> UIButton {
+        let button = UIButton(type: .system)
+        
+        let attributedTitle = NSMutableAttributedString(
+            string: firstPart,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
+                         NSAttributedString.Key.font: UIFont.callout])
+        
+        attributedTitle.append(NSAttributedString(
+            string: secondPart,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
+                         NSAttributedString.Key.font: UIFont.calloutBold]))
+        
+        return button
+    }
 }

@@ -7,9 +7,17 @@
 
 import UIKit
 
+protocol LoginViewDelegate: AnyObject {
+    func handleLogin()
+    func handleSignIn()
+}
+
 class LoginView: UIView {
-    
-    private let mainLogoImageView: UIImageView = {
+        
+    weak var delegate: LoginViewDelegate?
+
+    //MARK: UI Elements
+    private lazy var mainLogoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
@@ -25,30 +33,49 @@ class LoginView: UIView {
     }()
     
     private lazy var emailContainerView: UIView = {
-        let containerView = Components().inputContainerView(
+        let containerView = Components.inputContainerLoginView(
             withImage: TwitterImages.icMailSmall.image,
             textfield: emailTextField)
         return containerView
     }()
     
     private lazy var passwordContainerView: UIView = {
-        let containerView = Components().inputContainerView(
+        let containerView = Components.inputContainerLoginView(
             withImage: TwitterImages.icLock.image,
             textfield: passwordTextField)
         return containerView
     }()
     
-    private let emailTextField: UITextField = {
-        let textField = Components().textField(
+    private lazy var emailTextField: UITextField = {
+        let textField = Components.textFieldLoginView(
             withPlaceholder: Localizable.email_placeholder.localized)
         return textField
     }()
     
-    private let passwordTextField: UITextField = {
-        let textField = Components().textField(
+    private lazy var passwordTextField: UITextField = {
+        let textField = Components.textFieldLoginView(
             withPlaceholder: Localizable.password_placeholder.localized)
         textField.isSecureTextEntry = true
         return textField
+    }()
+    
+    private lazy var loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle(Localizable.log_in_button.localized, for: .normal)
+        button.setTitleColor(UIColor.twitterBlue, for: .normal)
+        button.titleLabel?.font = .bodyBold
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(handlelogin), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var dontHaveAccountButton: UIButton = {
+        let button = Components.attributedButton(
+            Localizable.dont_have_account_text.localized,
+            Localizable.sign_in_text.localized)
+        button.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
+        return button
     }()
     
     override init(frame: CGRect) {
@@ -61,13 +88,26 @@ class LoginView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
+//MARK: Selectors
+private extension LoginView {
+    
+    @objc func handlelogin() {
+        delegate?.handleLogin()
+    }
+    
+    @objc func handleSignIn() {
+        delegate?.handleSignIn()
+    }
+}
+
+//MARK: AutoLayouts
 private extension LoginView {
     
     func configureUI() {
         backgroundColor = .twitterBlue
+        loginButton.addCornerRadius(5)
     }
     
     func setLayouts() {
@@ -76,7 +116,7 @@ private extension LoginView {
         stackView.anchor(top: mainLogoImageView.bottomAnchor,
                          left: leftAnchor, paddingLeft: 16,
                          right: rightAnchor, paddingRight: 16,
-                         height: 120)
+                         height: 180)
     }
     
     func addSubViews() {
@@ -84,5 +124,6 @@ private extension LoginView {
         addSubview(stackView)
         stackView.addArrangedSubview(emailContainerView)
         stackView.addArrangedSubview(passwordContainerView)
+        stackView.addArrangedSubview(loginButton)
     }
 }

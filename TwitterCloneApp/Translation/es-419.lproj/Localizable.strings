@@ -9,6 +9,9 @@
 //MARK: Login View
 "email_placeholder" = "Email";
 "password_placeholder" = "Password";
+"log_in_button" = "Log In";
+"dont_have_account_text" = "No tienes una cuenta";
+"sign_up_text" = "Sign In";
 
 //MARK: Explore View
 "explore_nav_title" = "Explorar";

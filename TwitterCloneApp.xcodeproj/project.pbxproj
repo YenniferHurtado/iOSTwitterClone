@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7A57EA28B7F2CD004E033F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A57E928B7F2CD004E033F /* MainTabBarViewController.swift */; };
 		CE83313628AC510300D8E9EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83313528AC510300D8E9EE /* AppDelegate.swift */; };
 		CE83313828AC510300D8E9EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83313728AC510300D8E9EE /* SceneDelegate.swift */; };
 		CE83313F28AC510400D8E9EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE83313E28AC510400D8E9EE /* Assets.xcassets */; };
 		CE83314228AC510400D8E9EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE83314028AC510400D8E9EE /* LaunchScreen.storyboard */; };
-		CE83315028AC52C500D8E9EE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83314F28AC52C500D8E9EE /* MainTabBarViewController.swift */; };
 		CE83315228AC53E600D8E9EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE83315128AC53E600D8E9EE /* Main.storyboard */; };
 		CE83315428AC565300D8E9EE /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83315328AC565300D8E9EE /* FeedViewController.swift */; };
 		CE83315628AC568800D8E9EE /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83315528AC568800D8E9EE /* ExploreViewController.swift */; };
@@ -33,13 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE7A57E928B7F2CD004E033F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		CE83313228AC510300D8E9EE /* TwitterCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE83313528AC510300D8E9EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE83313728AC510300D8E9EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE83313E28AC510400D8E9EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE83314128AC510400D8E9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE83314328AC510400D8E9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE83314F28AC52C500D8E9EE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		CE83315128AC53E600D8E9EE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE83315328AC565300D8E9EE /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		CE83315528AC568800D8E9EE /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +72,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE42E06928E6034E00F47C61 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A57E928B7F2CD004E033F /* MainTabBarViewController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		CE42E06A28E6035700F47C61 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				CE83315528AC568800D8E9EE /* ExploreViewController.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		CE42E06B28E6036000F47C61 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				CE83315928AC56B500D8E9EE /* MessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		CE42E06C28E6036500F47C61 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				CE83315728AC56A300D8E9EE /* NotificationViewController.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		CE42E06D28E603BF00F47C61 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				CE83315328AC565300D8E9EE /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		CE83312928AC510300D8E9EE = {
 			isa = PBXGroup;
 			children = (
@@ -113,11 +153,11 @@
 			isa = PBXGroup;
 			children = (
 				CE83317F28B2B58000D8E9EE /* Authentication */,
-				CE83314F28AC52C500D8E9EE /* MainTabBarViewController.swift */,
-				CE83315328AC565300D8E9EE /* FeedViewController.swift */,
-				CE83315528AC568800D8E9EE /* ExploreViewController.swift */,
-				CE83315728AC56A300D8E9EE /* NotificationViewController.swift */,
-				CE83315928AC56B500D8E9EE /* MessageViewController.swift */,
+				CE42E06D28E603BF00F47C61 /* Feed */,
+				CE42E06A28E6035700F47C61 /* Explore */,
+				CE42E06C28E6036500F47C61 /* Notification */,
+				CE42E06B28E6036000F47C61 /* Message */,
+				CE42E06928E6034E00F47C61 /* MainTabBar */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,8 +224,8 @@
 		CE83317F28B2B58000D8E9EE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				CE83318B28B7C01F00D8E9EE /* Registration */,
 				CE83318A28B7C00300D8E9EE /* Login */,
+				CE83318B28B7C01F00D8E9EE /* Registration */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -283,13 +323,13 @@
 				CE83318128B2B59D00D8E9EE /* LoginViewController.swift in Sources */,
 				CE83317E28B2AD1300D8E9EE /* UIView.swift in Sources */,
 				CE83317728B0304200D8E9EE /* LocalizablesEnum.swift in Sources */,
+				CE7A57EA28B7F2CD004E033F /* MainTabBarViewController.swift in Sources */,
 				CE83318528B42B2200D8E9EE /* Date.swift in Sources */,
 				CE83317C28B0408700D8E9EE /* UIColor.swift in Sources */,
 				CE83317A28B0406500D8E9EE /* UIViewLayouts.swift in Sources */,
 				CE83313628AC510300D8E9EE /* AppDelegate.swift in Sources */,
 				CE83317428B02EF800D8E9EE /* Strings.swift in Sources */,
 				CE83318928B587DD00D8E9EE /* UIFont.swift in Sources */,
-				CE83315028AC52C500D8E9EE /* MainTabBarViewController.swift in Sources */,
 				CE83315828AC56A300D8E9EE /* NotificationViewController.swift in Sources */,
 				CE83318328B2B63E00D8E9EE /* RegistrationViewController.swift in Sources */,
 				CE83315C28AC5C1D00D8E9EE /* TwitterImages.swift in Sources */,

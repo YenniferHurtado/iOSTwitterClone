@@ -10,42 +10,33 @@ import UIKit
 class MainTabBarViewController: UITabBarController {
 
     // MARK: - Properties
-    
     private let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
         button.backgroundColor = .twitterBlue
         button.setImage(TwitterImages.icNewTweet.image, for: .normal)
-        button.addTarget(MainTabBarViewController.self,
+        button.addTarget(self,
                          action: #selector(actionButtonTapped),
                          for: .touchUpInside)
         return button
     }()
     
     // MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationControllerToMain()
+        setNavigationControllerToTab()
         addViews()
         setLayouts()
     }
     
-}
-
-// MARK: - Selectors
-
-private extension MainTabBarViewController {
-
-    @objc func actionButtonTapped() {
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 }
 
-// MARK: - Helpers
-
+// MARK: - UI-Layouts
 private extension MainTabBarViewController {
-        
     func setLayouts() {
         actionButton.addCornerRadius(26)
         actionButton.anchor(bottom: view.bottomAnchor, paddingBottom: 105,
@@ -54,10 +45,18 @@ private extension MainTabBarViewController {
     }
     
     func addViews() {
+        view.backgroundColor = .white
         view.addSubview(actionButton)
     }
+}
+
+// MARK: - Helpers
+private extension MainTabBarViewController {
+    @objc func actionButtonTapped() {
+        print("prueba")
+    }
     
-    func setNavigationControllerToMain() {
+    func setNavigationControllerToTab() {
         viewControllers = setViewControllersToNavigation(
             viewControllers: [FeedViewController(iconTabBar: TwitterImages.icHomeUnselected.image),
                               ExploreViewController(iconTabBar: TwitterImages.icSearchUnselected.image),

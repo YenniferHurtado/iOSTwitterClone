@@ -9,7 +9,10 @@ enum Localizable {
     //MARK: Login View
     static let email_placeholder = "email_placeholder"
     static let password_placeholder = "password_placeholder"
-
+    static let log_in_button = "log_in_button"
+    static let dont_have_account_text = "dont_have_account_text"
+    static let sign_in_text = "sign_up_text"
+    
     //MARK: Explore View
     static let explore_nav_title: String = "explore_nav_title"
     //MARK: Notification View
