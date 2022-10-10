@@ -61,6 +61,7 @@ class Components {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
                          NSAttributedString.Key.font: UIFont.calloutBold]))
         
+        button.setAttributedTitle(attributedTitle, for: .normal)
         return button
     }
 }

@@ -17,8 +17,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         addSubViews()
         setLayouts()
-        tapHideKeywoard()
         initDelegate()
+        tapHideKeywoard()
     }
 }
 // MARK: - Delegate
@@ -31,8 +31,9 @@ extension LoginViewController: LoginViewDelegate {
         print("login")
     }
     
-    func handleSignIn() {
-        print("sign in")
+    func handleShowSignUp() {
+        navigationController?.pushViewController(RegistrationViewController(),
+                                                 animated: true)
     }
 }
 

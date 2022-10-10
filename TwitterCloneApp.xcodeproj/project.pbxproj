@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE42E07128F07F0F00F47C61 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E07028F07F0F00F47C61 /* RegistrationView.swift */; };
 		CE7A57EA28B7F2CD004E033F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A57E928B7F2CD004E033F /* MainTabBarViewController.swift */; };
 		CE83313628AC510300D8E9EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83313528AC510300D8E9EE /* AppDelegate.swift */; };
 		CE83313828AC510300D8E9EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83313728AC510300D8E9EE /* SceneDelegate.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE42E07028F07F0F00F47C61 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CE7A57E928B7F2CD004E033F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		CE83313228AC510300D8E9EE /* TwitterCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE83313528AC510300D8E9EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				CE83318228B2B63E00D8E9EE /* RegistrationViewController.swift */,
+				CE42E07028F07F0F00F47C61 /* RegistrationView.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				CE83318D28B7C03200D8E9EE /* LoginView.swift in Sources */,
 				CE83315A28AC56B500D8E9EE /* MessageViewController.swift in Sources */,
 				CE83318728B57B6300D8E9EE /* Components.swift in Sources */,
+				CE42E07128F07F0F00F47C61 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

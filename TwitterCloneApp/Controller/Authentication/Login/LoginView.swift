@@ -9,7 +9,7 @@ import UIKit
 
 protocol LoginViewDelegate: AnyObject {
     func handleLogin()
-    func handleSignIn()
+    func handleShowSignUp()
 }
 
 class LoginView: UIView {
@@ -73,7 +73,7 @@ class LoginView: UIView {
     private lazy var dontHaveAccountButton: UIButton = {
         let button = Components.attributedButton(
             Localizable.dont_have_account_text.localized,
-            Localizable.sign_in_text.localized)
+            " \(Localizable.sign_in_text.localized)")
         button.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
         return button
     }()
@@ -98,18 +98,18 @@ private extension LoginView {
     }
     
     @objc func handleSignIn() {
-        delegate?.handleSignIn()
+        delegate?.handleShowSignUp()
     }
 }
 
 //MARK: AutoLayouts
 private extension LoginView {
-    
+
     func configureUI() {
         backgroundColor = .twitterBlue
         loginButton.addCornerRadius(5)
     }
-    
+
     func setLayouts() {
         mainLogoImageView.centerX(inView: self,
                                   topAnchor: safeAreaLayoutGuide.topAnchor)
@@ -117,13 +117,18 @@ private extension LoginView {
                          left: leftAnchor, paddingLeft: 16,
                          right: rightAnchor, paddingRight: 16,
                          height: 180)
+        dontHaveAccountButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, paddingBottom: 16,
+                                     left: leftAnchor, paddingLeft: 40,
+                                     right: rightAnchor, paddingRight: 40)
     }
-    
+
     func addSubViews() {
         addSubview(mainLogoImageView)
         addSubview(stackView)
         stackView.addArrangedSubview(emailContainerView)
         stackView.addArrangedSubview(passwordContainerView)
         stackView.addArrangedSubview(loginButton)
+        addSubview(dontHaveAccountButton)
     }
 }
+

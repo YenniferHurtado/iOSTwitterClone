@@ -8,10 +8,16 @@
 
 //MARK: Login View
 "email_placeholder" = "Email";
-"password_placeholder" = "Password";
-"log_in_button" = "Log In";
-"dont_have_account_text" = "No tienes una cuenta";
-"sign_up_text" = "Sign In";
+"password_placeholder" = "Contraseña";
+"log_in_button" = "Iniciar sesión";
+"dont_have_account_text" = "No tienes una cuenta?";
+"sign_in_text" = "Registrate";
+
+//MARK: RegistrationView
+"full_name_placeholder" = "Nombre completo";
+"username_placeholder" = "Nombre de usuario";
+"already_have_account_button" = "Ya tienes una cuenta?";
+"sign_in_button" = "Inicia sesión";
 
 //MARK: Explore View
 "explore_nav_title" = "Explorar";

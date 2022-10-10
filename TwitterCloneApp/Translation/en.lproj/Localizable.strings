@@ -10,8 +10,14 @@
 "email_placeholder" = "Email";
 "password_placeholder" = "Password";
 "log_in_button" = "Log In";
-"dont_have_account_text" = "Don't have an account";
-"sign_up_text" = "Sign Up";
+"dont_have_account_text" = "Don't have an account?";
+"sign_in_text" = "Sign In";
+
+//MARK: RegistrationView
+"full_name_placeholder" = "Full Name";
+"username_placeholder" = "Username";
+"already_have_account_button" = "Already have an account?";
+"sign_in_button" = "Log in";
 
 //MARK: Explore View
 "explore_nav_title" = "Explore";
