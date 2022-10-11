@@ -7,6 +7,23 @@
 */
 
 //MARK: Login View
+"main_text_label" = "Entérate de lo que está pasando en el mundo en este momento.";
+"continue_google" = "Continuar con Google";
+"continue_apple" = "Continuar con Apple";
+"create_account" = "Crear cuenta";
+"terms_policy_cookies_label" = "Al registrarte, aceptas los Términos, la Política de privacidad y la Política de cookies.";
+"terms_label" = "Términos";
+"privacy_policy_label" = "Política de privacidad";
+"cookies_policy_label" = "Política de cookies.";
+"already_have_account_button" = "¿Ya tienes una cuenta?";
+"login_button" = "Inicia sesión";
+
+// - Terms Links
+"terms_link" = "https://twitter.com/es/tos";
+"privacy_link" = "https://twitter.com/es/privacy";
+"cookies_link" = "https://help.twitter.com/es/rules-and-policies/twitter-cookies";
+
+//MARK: Register View
 "email_placeholder" = "Email";
 "password_placeholder" = "Contraseña";
 "log_in_button" = "Iniciar sesión";
@@ -16,8 +33,6 @@
 //MARK: RegistrationView
 "full_name_placeholder" = "Nombre completo";
 "username_placeholder" = "Nombre de usuario";
-"already_have_account_button" = "Ya tienes una cuenta?";
-"sign_in_button" = "Inicia sesión";
 
 //MARK: Explore View
 "explore_nav_title" = "Explorar";

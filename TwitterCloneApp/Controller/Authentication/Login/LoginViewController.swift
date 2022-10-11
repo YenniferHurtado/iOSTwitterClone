@@ -15,44 +15,42 @@ class LoginViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubViews()
         setLayouts()
         initDelegate()
-        tapHideKeywoard()
-    }
-}
-// MARK: - Delegate
-extension LoginViewController: LoginViewDelegate {
-    func initDelegate() {
-        loginView.delegate = self
-    }
-    
-    func handleLogin() {
-        print("login")
-    }
-    
-    func handleShowSignUp() {
-        navigationController?.pushViewController(RegistrationViewController(),
-                                                 animated: true)
     }
 }
 
-// MARK: - HELPERS
-extension LoginViewController {
-    func tapHideKeywoard() {
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-        view.addGestureRecognizer(tap)
+// MARK: - DELEGATE
+extension LoginViewController: LoginViewDelegate {
+    
+    func continueWithGoogle() {
+        
+    }
+    
+    func continueWithApple() {
+        
+    }
+    
+    func createAccount() {
+        
+    }
+    
+    func pushToLoginView() {
+        let controller = RegistrationViewController()
+        navigationController?.pushViewController(controller,animated: true)
+    }
+    
+    func initDelegate() {
+        loginView.delegate = self
     }
 }
 
 // MARK: - LAYOUTS
 private extension LoginViewController {
     func setLayouts() {
+        view.addSubview(loginView)
+        navigationItem.titleView = loginView.mainLogoImageView
         loginView.anchor(top: view.topAnchor, bottom: view.bottomAnchor,
                          left: view.leftAnchor, right: view.rightAnchor)
-    }
-    
-    func addSubViews() {
-        view.addSubview(loginView)
     }
 }

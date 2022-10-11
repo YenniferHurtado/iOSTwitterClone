@@ -27,7 +27,9 @@ public enum TwitterImages: String {
     case icSearchUnselected = "ic_search_unselected"
     case icShare = "ic_share"
     case icTwitterLogoBlue = "ic_twitter_logo_blue"
-    
+    case icGoogle = "ic_google"
+    case icApple = "ic_apple"
+
     public var image: UIImage? {
         UIImage(named: rawValue)
     }

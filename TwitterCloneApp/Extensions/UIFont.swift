@@ -11,8 +11,8 @@ extension UIFont {
     
     public static var largeTitle = UIFont.systemFont(ofSize: 34, weight: .regular)
     public static var largeTitleBold = UIFont.systemFont(ofSize: 34, weight: .bold)
-    public static var title1 = UIFont.systemFont(ofSize: 28, weight: .regular)
-    public static var title1Bold = UIFont.systemFont(ofSize: 28, weight: .bold)
+    public static var title1 = UIFont.systemFont(ofSize: 30, weight: .regular)
+    public static var title1Bold = UIFont.systemFont(ofSize: 30, weight: .bold)
     public static var title2 = UIFont.systemFont(ofSize: 22, weight: .regular)
     public static var title2Semibold = UIFont.systemFont(ofSize: 22, weight: .semibold)
     public static var title2Bold = UIFont.systemFont(ofSize: 22, weight: .bold)
@@ -27,6 +27,7 @@ extension UIFont {
     public static var calloutBold = UIFont.systemFont(ofSize: 16, weight: .bold)
     public static var subheadline = UIFont.systemFont(ofSize: 15, weight: .regular)
     public static var subheadlineSemiBold = UIFont.systemFont(ofSize: 15, weight: .semibold)
+    public static var subheadlineBold = UIFont.systemFont(ofSize: 15, weight: .bold)
     public static var body03 = UIFont.systemFont(ofSize: 14, weight: .regular)
     public static var body03SemiBold = UIFont.systemFont(ofSize: 14, weight: .semibold)
     public static var body03Bold = UIFont.systemFont(ofSize: 14, weight: .bold)

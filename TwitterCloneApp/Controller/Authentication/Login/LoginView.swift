@@ -8,79 +8,119 @@
 import UIKit
 
 protocol LoginViewDelegate: AnyObject {
-    func handleLogin()
-    func handleShowSignUp()
+    func continueWithGoogle()
+    func continueWithApple()
+    func createAccount()
+    func pushToLoginView()
 }
 
 class LoginView: UIView {
         
     weak var delegate: LoginViewDelegate?
 
-    //MARK: UI Elements
-    private lazy var mainLogoImageView: UIImageView = {
+    //MARK: UI ELEMENTS
+    lazy var mainLogoImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = TwitterImages.icTwitterLogoBlue.image
         imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        imageView.image = TwitterImages.icMainTwitterLogo.image
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
+    private lazy var mainTextLabel: UILabel = {
+        let label = UILabel()
+        label.text = Localizable.main_text_label.localized
+        label.font = .title1Bold
+        label.numberOfLines = 0
+        return label
+    }()
+    
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView()
+        let subViewsInside = [googleButton, appleButton, separatorLabel,
+                              createAccountButton, termsPrivacyCookiesLabel,
+                              alreadyHaveAccountButton]
+        let stackView = UIStackView(arrangedSubviews: subViewsInside)
         stackView.axis = .vertical
-        stackView.spacing = 20
         return stackView
     }()
     
-    private lazy var emailContainerView: UIView = {
-        let containerView = Components.inputContainerLoginView(
-            withImage: TwitterImages.icMailSmall.image,
-            textfield: emailTextField)
-        return containerView
-    }()
-    
-    private lazy var passwordContainerView: UIView = {
-        let containerView = Components.inputContainerLoginView(
-            withImage: TwitterImages.icLock.image,
-            textfield: passwordTextField)
-        return containerView
-    }()
-    
-    private lazy var emailTextField: UITextField = {
-        let textField = Components.textFieldLoginView(
-            withPlaceholder: Localizable.email_placeholder.localized)
-        return textField
-    }()
-    
-    private lazy var passwordTextField: UITextField = {
-        let textField = Components.textFieldLoginView(
-            withPlaceholder: Localizable.password_placeholder.localized)
-        textField.isSecureTextEntry = true
-        return textField
-    }()
-    
-    private lazy var loginButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle(Localizable.log_in_button.localized, for: .normal)
-        button.setTitleColor(UIColor.twitterBlue, for: .normal)
-        button.titleLabel?.font = .bodyBold
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(handlelogin), for: .touchUpInside)
+    /* - UIButtons */
+    private lazy var googleButton: UIButton = {
+        let button = Components.templateButtonLogin(
+            withImage: TwitterImages.icGoogle.image,
+            titleText: Localizable.continue_google.localized,
+            textColor: .black)
+        button.addTarget(self, action: #selector(tapGoogleButton),
+                         for: .touchUpInside)
         return button
     }()
     
-    private lazy var dontHaveAccountButton: UIButton = {
+    private lazy var appleButton: UIButton = {
+        let button = Components.templateButtonLogin(
+            withImage: TwitterImages.icApple.image,
+            titleText: Localizable.continue_apple.localized,
+            textColor: .black)
+        button.addTarget(self, action: #selector(tapAppleButton),
+                         for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var createAccountButton: UIButton = {
+        let button = Components.templateButtonLogin(
+            withImage: nil,
+            titleText: Localizable.create_account.localized,
+            textColor: .white)
+        button.backgroundColor = .black
+        button.addTarget(self, action: #selector(tapCreateAccountButton),
+                         for: .touchUpInside)
+        return button
+    }()
+    
+    /* - UILabels */
+    private lazy var separatorLabel: UILabel = {
+        let label = UILabel()
+        label.text = "——————————————— o ———————————————"
+        label.textAlignment = .center
+        label.textColor = .lightGray
+        label.font = .caption2
+        return label
+    }()
+    
+    private lazy var termsPrivacyCookiesLabel: UITextView = {
+        
+        let termLink = Components.ValueLink(
+            text: Localizable.terms_label.localized,
+            hyperlink: Localizable.terms_link.localized)
+        
+        let policyLink = Components.ValueLink(
+            text: Localizable.privacy_policy_label.localized,
+            hyperlink: Localizable.privacy_link.localized)
+        
+        let cookiesLink = Components.ValueLink(
+            text: Localizable.cookies_policy_label.localized,
+            hyperlink: Localizable.cookies_link.localized)
+        
+        let label = Components.textWithHyperLinks(
+            Localizable.terms_policy_cookies_label.localized,
+            firstLink: termLink,
+            secondLink: policyLink,
+            thirdLink: cookiesLink)
+        
+        return label
+    }()
+    
+    private lazy var alreadyHaveAccountButton: UIButton = {
         let button = Components.attributedButton(
-            Localizable.dont_have_account_text.localized,
-            " \(Localizable.sign_in_text.localized)")
-        button.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
+            Localizable.already_have_account_button.localized,
+            " \(Localizable.log_in_button.localized)")
+        button.contentHorizontalAlignment = .left
+        button.addTarget(self, action: #selector(tapLoginButton),
+                         for: .touchUpInside)
         return button
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureUI()
         addSubViews()
         setLayouts()
     }
@@ -90,45 +130,50 @@ class LoginView: UIView {
     }
 }
 
-//MARK: Selectors
+//MARK: SELECTORS & DELEGATE
 private extension LoginView {
     
-    @objc func handlelogin() {
-        delegate?.handleLogin()
+    @objc func tapLoginButton() {
+        delegate?.pushToLoginView()
     }
     
-    @objc func handleSignIn() {
-        delegate?.handleShowSignUp()
+    @objc func tapGoogleButton() {
+        delegate?.continueWithGoogle()
+    }
+    
+    @objc func tapAppleButton() {
+        delegate?.continueWithApple()
+    }
+    
+    @objc func tapCreateAccountButton() {
+        delegate?.createAccount()
     }
 }
 
-//MARK: AutoLayouts
+//MARK: AUTOLAYOUTS
 private extension LoginView {
-
-    func configureUI() {
-        backgroundColor = .twitterBlue
-        loginButton.addCornerRadius(5)
-    }
-
+    
     func setLayouts() {
-        mainLogoImageView.centerX(inView: self,
-                                  topAnchor: safeAreaLayoutGuide.topAnchor)
-        stackView.anchor(top: mainLogoImageView.bottomAnchor,
-                         left: leftAnchor, paddingLeft: 16,
-                         right: rightAnchor, paddingRight: 16,
-                         height: 180)
-        dontHaveAccountButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, paddingBottom: 16,
-                                     left: leftAnchor, paddingLeft: 40,
-                                     right: rightAnchor, paddingRight: 40)
+        backgroundColor = .systemBackground
+        mainTextLabel.centerX(inView: self)
+        mainTextLabel.anchor(top: topAnchor, paddingTop: 200,
+                             left: leftAnchor, paddingLeft: 32,
+                             right: rightAnchor, paddingRight: 32)
+        stackView.anchor(bottom: safeAreaLayoutGuide.bottomAnchor,
+                         left: leftAnchor, paddingLeft: 32,
+                         right: rightAnchor, paddingRight: 32)
+        termsPrivacyCookiesLabel.anchor(height: 50)
+        alreadyHaveAccountButton.anchor(height: 50)
     }
 
     func addSubViews() {
-        addSubview(mainLogoImageView)
+        addSubview(mainTextLabel)
         addSubview(stackView)
-        stackView.addArrangedSubview(emailContainerView)
-        stackView.addArrangedSubview(passwordContainerView)
-        stackView.addArrangedSubview(loginButton)
-        addSubview(dontHaveAccountButton)
+        stackView.setCustomSpacing(15, after: googleButton)
+        stackView.setCustomSpacing(15, after: appleButton)
+        stackView.setCustomSpacing(10, after: separatorLabel)
+        stackView.setCustomSpacing(20, after: createAccountButton)
+        stackView.setCustomSpacing(18, after: termsPrivacyCookiesLabel)
     }
 }
 
