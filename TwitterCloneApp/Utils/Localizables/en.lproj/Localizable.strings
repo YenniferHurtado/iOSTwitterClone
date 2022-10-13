@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  TwitterCloneApp
+
+  Created by Yennifer Hurtado Arce on 19/08/22.
+  
+*/
+
+//MARK: LOGIN VIEW
+"main_text_login_label" = "Find out what is happening in the world right now.";
+"continue_google" = "Continue with Google";
+"continue_apple" = "Continue with Apple";
+"create_account" = "Create Account";
+"terms_policy_cookies_label" = "By registering, you accept the Terms, the Privacy Policy and the Cookies Policy.";
+"terms_label" = "Terms";
+"privacy_policy_label" = "Privacy Policy";
+"cookies_policy_label" = "Cookies Policy.";
+"already_have_account_button" = "Do you already have an account?";
+"login_button" = "Log in";
+    // - Terms Links
+"terms_link" = "https://twitter.com/es/tos";
+"privacy_link" = "https://twitter.com/es/privacy";
+"cookies_link" = "https://help.twitter.com/es/rules-and-policies/twitter-cookies";
+
+//MARK: REGISTER VIEW
+"cancel_button" = "Cancel";
+"main_text_register_label" = "To get started, enter your phone, email or @username";
+"username_placeholder" = "Phone, email or username";
+"forget_password_button" = "Did you forget your password?";
+"next_button" = "Next";
+"log_in_button" = "Log In";
+
+//MARK: EXPLORE VIEW
+"explore_nav_title" = "Explore";
+"notification_nav_title" = "Notification";
+"messages_nav_title" = "Messages";

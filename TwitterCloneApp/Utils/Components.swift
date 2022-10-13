@@ -58,13 +58,12 @@ class Components {
         return loginButton
     }
     
-    class func textFieldView(withPlaceholder placeholder: String) -> UITextField {
+    class func textField(withPlaceholder placeholder: String) -> UITextField {
         let textField = UITextField()
-        textField.textColor = .white
         textField.font = .callout
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         return textField
     }
     
@@ -78,7 +77,7 @@ class Components {
         
         attributedTitle.append(NSAttributedString(
             string: signInText,
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.twitterBlue,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.link,
                          NSAttributedString.Key.font: UIFont.subheadline]))
         button.setAttributedTitle(attributedTitle, for: .normal)
         return button
