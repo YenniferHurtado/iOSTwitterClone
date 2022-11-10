@@ -14,33 +14,36 @@ class Components {
         var hyperlink = ""
     }
     
+    class func setTitleBackButton(text: String, action: Any) -> UIBarButtonItem {
+        let backButton = UIBarButtonItem(title: text,
+                                         style: .plain,
+                                         target: nil,
+                                         action: action as? Selector)
+        return backButton
+    }
+    
     class func templateButtonLogin(withImage image: UIImage?,
                                    titleText: String,
                                    textColor: UIColor) -> UIButton {
 
-        let loginButton: UIButton = {
-            let button = UIButton()
-            button.addCornerRadius(60 / 2)
-            button.addBorderLine(width: 0.4, color: .gray)
-            button.anchor(height: 60)
-            return button
-        }()
+        let loginButton = UIButton(type: .system)
+        loginButton.addCornerRadius(60 / 2)
+        loginButton.addBorderLine(width: 0.4, color: .gray)
+        loginButton.anchor(height: 60)
+     
         
         let contentView = UIView()
+        contentView.isUserInteractionEnabled = false
         let iconImageView = UIImageView()
         iconImageView.image = image
         
-        let label: UILabel = {
-            let label = UILabel()
-            label.text = titleText
-            label.font = .calloutSemiBold
-            label.textColor = textColor
-            return label
-        }()
+        let label = UILabel()
+        label.text = titleText
+        label.font = .calloutSemiBold
+        label.textColor = textColor
 
         loginButton.addSubview(contentView)
-        contentView.addSubview(iconImageView)
-        contentView.addSubview(label)
+        contentView.addSubViews(views: [iconImageView, label])
 
         contentView.center(inView: loginButton)
         contentView.anchor(width: 200, height: 50)
@@ -54,21 +57,10 @@ class Components {
         iconImageView.image != nil ?
         label.anchor(left: iconImageView.rightAnchor, paddingLeft: 15) :
         label.centerX(inView: loginButton)
-                    
         return loginButton
     }
     
-    class func textField(withPlaceholder placeholder: String) -> UITextField {
-        let textField = UITextField()
-        textField.font = .callout
-        textField.attributedPlaceholder = NSAttributedString(
-            string: placeholder,
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
-        return textField
-    }
-    
     class func attributedButton(_ normalText: String, _ signInText: String) -> UIButton {
-        
         let button = UIButton(type: .system)
         let attributedTitle = NSMutableAttributedString(
             string: normalText,
@@ -81,6 +73,27 @@ class Components {
                          NSAttributedString.Key.font: UIFont.subheadline]))
         button.setAttributedTitle(attributedTitle, for: .normal)
         return button
+    }
+    
+    class func textField(withPlaceholder placeholder: String) -> UITextField {
+        let textField = UITextField()
+        textField.font = .callout
+        textField.textColor = .twitterBlue
+        textField.attributedPlaceholder = NSAttributedString(
+            string: placeholder,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+        )
+        
+        let underline = UIView()
+        underline.backgroundColor = .lightGray
+        
+        textField.addSubview(underline)
+        textField.anchor(height: 30)
+        underline.anchor(bottom: textField.bottomAnchor, paddingBottom: -10,
+                         left: textField.leftAnchor,
+                         right: textField.rightAnchor,
+                         height: 0.75)
+        return textField
     }
     
     class func textWithHyperLinks(_ allText: String,

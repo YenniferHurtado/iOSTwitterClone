@@ -10,6 +10,8 @@
 		A6C8155F70326B2DC1FFFF66 /* Pods_TwitterCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AADBD332901302023BE4131 /* Pods_TwitterCloneApp.framework */; };
 		CE42E07128F07F0F00F47C61 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E07028F07F0F00F47C61 /* LoginView.swift */; };
 		CE42E07728F7568C00F47C61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE42E07628F7568C00F47C61 /* GoogleService-Info.plist */; };
+		CE42E07A28F8CB7200F47C61 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E07928F8CB7200F47C61 /* CreateAccountViewController.swift */; };
+		CE42E07C28F8CB7F00F47C61 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E07B28F8CB7F00F47C61 /* CreateAccountView.swift */; };
 		CE7A57EA28B7F2CD004E033F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A57E928B7F2CD004E033F /* MainTabBarViewController.swift */; };
 		CE83313628AC510300D8E9EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83313528AC510300D8E9EE /* AppDelegate.swift */; };
 		CE83313828AC510300D8E9EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83313728AC510300D8E9EE /* SceneDelegate.swift */; };
@@ -41,6 +43,8 @@
 		87088F28243A28897E7EB9EE /* Pods-TwitterCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterCloneApp.release.xcconfig"; path = "Target Support Files/Pods-TwitterCloneApp/Pods-TwitterCloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		CE42E07028F07F0F00F47C61 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE42E07628F7568C00F47C61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE42E07928F8CB7200F47C61 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		CE42E07B28F8CB7F00F47C61 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		CE7A57E928B7F2CD004E033F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		CE83313228AC510300D8E9EE /* TwitterCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE83313528AC510300D8E9EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,15 @@
 				CE83315328AC565300D8E9EE /* FeedViewController.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		CE42E07828F8CB5E00F47C61 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				CE42E07928F8CB7200F47C61 /* CreateAccountViewController.swift */,
+				CE42E07B28F8CB7F00F47C61 /* CreateAccountView.swift */,
+			);
+			path = CreateAccount;
 			sourceTree = "<group>";
 		};
 		CE83312928AC510300D8E9EE = {
@@ -245,6 +258,7 @@
 		CE83317F28B2B58000D8E9EE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				CE42E07828F8CB5E00F47C61 /* CreateAccount */,
 				CE83318A28B7C00300D8E9EE /* SignIn */,
 				CE83318B28B7C01F00D8E9EE /* LogIn */,
 			);
@@ -395,6 +409,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE42E07C28F8CB7F00F47C61 /* CreateAccountView.swift in Sources */,
+				CE42E07A28F8CB7200F47C61 /* CreateAccountViewController.swift in Sources */,
 				CE83318128B2B59D00D8E9EE /* SignInViewController.swift in Sources */,
 				CE83317E28B2AD1300D8E9EE /* UIView.swift in Sources */,
 				CE83317728B0304200D8E9EE /* LocalizablesEnum.swift in Sources */,

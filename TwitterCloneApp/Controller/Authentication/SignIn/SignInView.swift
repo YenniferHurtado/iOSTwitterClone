@@ -10,7 +10,7 @@ import UIKit
 protocol SignInViewDelegate: AnyObject {
     func continueWithGoogle()
     func continueWithApple()
-    func createAccount()
+    func pushToCreateAccountView()
     func presentLoginView()
 }
 
@@ -36,9 +36,9 @@ class SignInView: UIView {
     }()
     
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [googleButton, appleButton, separatorLabel,
-                                                       createAccountButton, termsPrivacyCookiesLabel,
-                                                       alreadyHaveAccountButton])
+        let subviews = [googleButton, appleButton, separatorLabel, createAccountButton,
+                        termsPrivacyCookiesLabel, alreadyHaveAccountButton]
+        let stackView = UIStackView(arrangedSubviews: subviews)
         stackView.axis = .vertical
         return stackView
     }()
@@ -86,7 +86,6 @@ class SignInView: UIView {
     }()
     
     private lazy var termsPrivacyCookiesLabel: UITextView = {
-        
         let termLink = Components.ValueLink(
             text: Localizable.terms_label.localized,
             hyperlink: Localizable.terms_link.localized)
@@ -104,7 +103,6 @@ class SignInView: UIView {
             firstLink: termLink,
             secondLink: policyLink,
             thirdLink: cookiesLink)
-        
         return label
     }()
     
@@ -145,7 +143,7 @@ private extension SignInView {
     }
     
     @objc func tapCreateAccountButton() {
-        delegate?.createAccount()
+        delegate?.pushToCreateAccountView()
     }
 }
 

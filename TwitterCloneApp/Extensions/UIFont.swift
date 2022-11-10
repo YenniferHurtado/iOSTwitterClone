@@ -13,6 +13,7 @@ extension UIFont {
     public static var largeTitleBold = UIFont.systemFont(ofSize: 34, weight: .bold)
     public static var title1 = UIFont.systemFont(ofSize: 30, weight: .regular)
     public static var title1Bold = UIFont.systemFont(ofSize: 30, weight: .bold)
+    public static var titleMediumBold = UIFont.systemFont(ofSize: 24, weight: .bold)
     public static var titleMediumSemiBold = UIFont.systemFont(ofSize: 24, weight: .semibold)
     public static var title2 = UIFont.systemFont(ofSize: 22, weight: .regular)
     public static var title2Semibold = UIFont.systemFont(ofSize: 22, weight: .semibold)

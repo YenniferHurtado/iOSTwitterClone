@@ -56,12 +56,6 @@ class LoginView: UIView {
         return textField
     }()
     
-    private lazy var underline: UIView = {
-        let view = UIView()
-        view.backgroundColor = .lightGray
-        return view
-    }()
-    
     //MARK: Buttons
     private lazy var forgetPasswordButton: UIButton = {
         let button = UIButton(type: .system)
@@ -124,7 +118,7 @@ private extension LoginView {
     
     func addSubViews() {
         addSubViews(views: [cancelBackButton, mainLogoImageView, mainTextLabel,
-                            userTextField, underline, forgetPasswordButton, nextButton])
+                            userTextField, forgetPasswordButton, nextButton])
     }
     
     func setLayouts() {
@@ -138,10 +132,7 @@ private extension LoginView {
                              right: rightAnchor, paddingRight: 32)
         userTextField.anchor(top: mainTextLabel.bottomAnchor, paddingTop: 20,
                              left: leftAnchor, paddingLeft: 32,
-                             right: rightAnchor, paddingRight: 32, height: 30)
-        underline.anchor(bottom: userTextField.bottomAnchor, paddingBottom: -7,
-                         left: leftAnchor, paddingLeft: 32,
-                         right: rightAnchor, paddingRight: 32, height: 0.75)
+                             right: rightAnchor, paddingRight: 32)
         forgetPasswordButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, paddingBottom: 10,
                                     left: leftAnchor, paddingLeft: 32)
         nextButton.centerY(inView: forgetPasswordButton)

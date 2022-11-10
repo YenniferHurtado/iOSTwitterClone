@@ -6,7 +6,7 @@
   
 */
 
-//MARK: LOGIN VIEW
+//MARK: SIGNIN VIEW
 "main_text_login_label" = "Entérate de lo que está pasando en el mundo en este momento.";
 "continue_google" = "Continuar con Google";
 "continue_apple" = "Continuar con Apple";
@@ -22,13 +22,20 @@
 "privacy_link" = "https://twitter.com/es/privacy";
 "cookies_link" = "https://help.twitter.com/es/rules-and-policies/twitter-cookies";
 
-//MARK: REGISTER VIEW
+//MARK: LOGIN VIEW
 "cancel_button" = "Cancelar";
 "main_text_register_label" = "Para empezar, introduce tu teléfono, correo eléctronico o @nombredeusuario";
 "username_placeholder" = "Teléfono, correo eléctronico o nombre de usuario";
 "forget_password_button" = "¿Olvidaste tu contraseña?";
 "next_button" = "Siguiente";
 "log_in_button" = "Iniciar sesión";
+
+//MARK: CREATE ACCOUNT VIEW
+"create_account_label" = "Crea tu cuenta";
+"name_placeholder" = "Nombre";
+"number_or_user_placeholder" = "Número de teléfono o dirección de correo electrónico";
+"birth_placeholder" = "Fecha de Nacimiento";
+"phone_label" = "Teléfono";
 
 //MARK: Explore View
 "explore_nav_title" = "Explorar";

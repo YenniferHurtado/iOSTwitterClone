@@ -24,15 +24,16 @@ class SignInViewController: UIViewController {
 extension SignInViewController: SignInViewDelegate {
     
     func continueWithGoogle() {
-        
+        print("google")
     }
     
     func continueWithApple() {
-        
+        print("apple")
     }
     
-    func createAccount() {
-        
+    func pushToCreateAccountView() {
+        let controller = CreateAccountViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func presentLoginView() {
