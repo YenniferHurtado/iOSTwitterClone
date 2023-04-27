@@ -11,12 +11,23 @@ class SignInViewController: UIViewController {
 
     // MARK: - Properties
     private let signInView = SignInView()
+    private let viewModel = SignInViewModel()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayouts()
         initDelegate()
+        signInSuccess()
+    }
+}
+
+// MARK: - HELPERS
+private extension SignInViewController {
+    func signInSuccess() {
+        viewModel.onSignInSuccess = { [weak self] in
+            self?.navigationController?.pushViewController(MainTabBarViewController(), animated: true)
+        }
     }
 }
 
@@ -24,11 +35,11 @@ class SignInViewController: UIViewController {
 extension SignInViewController: SignInViewDelegate {
     
     func continueWithGoogle() {
-        print("google")
+        viewModel.startSocialSignIn(for: .google, view: self)
     }
     
     func continueWithApple() {
-        print("apple")
+        viewModel.startSocialSignIn(for: .apple, view: self)
     }
     
     func pushToCreateAccountView() {

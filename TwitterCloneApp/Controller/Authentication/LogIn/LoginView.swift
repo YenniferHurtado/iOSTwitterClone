@@ -70,16 +70,8 @@ class LoginView: UIView {
     }()
     
     lazy var nextButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle(Localizable.next_button.localized, for: .normal)
-        button.addTarget(self,
-                         action: #selector(tapNextButton),
-                         for: .touchUpInside)
-        button.titleLabel?.font = .subheadlineBold
-        button.setTitleColor(.systemGray4, for: .normal)
-        button.backgroundColor = .systemGray
-        button.isEnabled = false
-        button.addCornerRadius(15)
+        let button = Components.nextButtonComponent()
+        button.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
         return button
     }()
     

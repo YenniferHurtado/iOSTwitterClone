@@ -124,4 +124,20 @@ class Components {
         textView.isScrollEnabled = false
         return textView
     }
+    
+    class func nextButtonComponent() -> UIButton {
+        
+        lazy var nextButton: UIButton = {
+            let button = UIButton(type: .system)
+            button.setTitle(Localizable.next_button.localized, for: .normal)
+            button.titleLabel?.font = .subheadlineBold
+            button.setTitleColor(.systemGray4, for: .normal)
+            button.backgroundColor = .systemGray
+            button.isEnabled = false
+            button.addCornerRadius(15)
+            return button
+        }()
+        
+        return nextButton
+    }
 }

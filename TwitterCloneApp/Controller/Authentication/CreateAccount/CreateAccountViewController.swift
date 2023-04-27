@@ -25,6 +25,31 @@ class CreateAccountViewController: UIViewController {
 //MARK: DELEGATE
 extension CreateAccountViewController: CreateAccountViewDelegate {
     
+    func nextButtonEnabled() {
+        let userTextField = createAccountView.nameTextField
+        let birth = createAccountView.birthTextField
+        let number = createAccountView.numberOrUserTextField
+        
+        userTextField.text?.isEmpty ?? false && birth.text?.isEmpty ?? false && number.text?.isEmpty ?? false ?
+        on_offButton(
+            backgroundColor: .systemGray,
+            titleColor: .systemGray4,
+            isEnable: false) :
+        on_offButton(
+            backgroundColor: .black,
+            titleColor: .white,
+            isEnable: true)
+    }
+    
+    func on_offButton(backgroundColor: UIColor,
+                      titleColor: UIColor,
+                      isEnable: Bool) {
+        let nextButton = createAccountView.nextButton
+        nextButton.backgroundColor = backgroundColor
+        nextButton.setTitleColor(titleColor, for: .normal)
+        nextButton.isEnabled = isEnable
+    }
+    
     func showtopLabel(_ textField: UITextField, _ label: UILabel) {
         textField.text?.isEmpty ?? false ?
         isLabelHidden(hide: true, label: label) :

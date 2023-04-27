@@ -17,6 +17,8 @@
 "cookies_policy_label" = "Cookies Policy.";
 "already_have_account_button" = "Do you already have an account?";
 "login_button" = "Log in";
+"separate_or_label" = "——————————————— or ———————————————"
+
     // - Terms Links
 "terms_link" = "https://twitter.com/es/tos";
 "privacy_link" = "https://twitter.com/es/privacy";

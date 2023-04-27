@@ -78,7 +78,7 @@ class SignInView: UIView {
     /* - UILabels */
     private lazy var separatorLabel: UILabel = {
         let label = UILabel()
-        label.text = "——————————————— o ———————————————"
+        label.text = Localizable.separate_or_label.localized
         label.textAlignment = .center
         label.textColor = .lightGray
         label.font = .caption2

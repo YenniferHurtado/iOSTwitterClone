@@ -18,6 +18,7 @@ enum Localizable {
     static let cookies_policy_label = "cookies_policy_label";
     static let already_have_account_button = "already_have_account_button";
     static let login_button = "sign_in_button";
+    static let separate_or_label = "separate_or_label"
         // - Terms Links
     static let terms_link = "terms_link";
     static let privacy_link = "privacy_link";

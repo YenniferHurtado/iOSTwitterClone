@@ -7,5 +7,6 @@ target 'TwitterCloneApp' do
   pod 'FirebaseCore'
   pod 'FirebaseDatabase'
   pod 'FirebaseStorage'
+  pod 'GoogleSignIn'
 
 end

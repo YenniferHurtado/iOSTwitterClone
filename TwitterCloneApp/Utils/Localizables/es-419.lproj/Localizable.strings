@@ -21,6 +21,8 @@
 "terms_link" = "https://twitter.com/es/tos";
 "privacy_link" = "https://twitter.com/es/privacy";
 "cookies_link" = "https://help.twitter.com/es/rules-and-policies/twitter-cookies";
+"separate_or_label" = "——————————————— o ———————————————"
+
 
 //MARK: LOGIN VIEW
 "cancel_button" = "Cancelar";

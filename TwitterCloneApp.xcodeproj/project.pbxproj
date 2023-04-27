@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A6C8155F70326B2DC1FFFF66 /* Pods_TwitterCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AADBD332901302023BE4131 /* Pods_TwitterCloneApp.framework */; };
 		CE42E07128F07F0F00F47C61 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E07028F07F0F00F47C61 /* LoginView.swift */; };
-		CE42E07728F7568C00F47C61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE42E07628F7568C00F47C61 /* GoogleService-Info.plist */; };
 		CE42E07A28F8CB7200F47C61 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E07928F8CB7200F47C61 /* CreateAccountViewController.swift */; };
 		CE42E07C28F8CB7F00F47C61 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E07B28F8CB7F00F47C61 /* CreateAccountView.swift */; };
 		CE7A57EA28B7F2CD004E033F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A57E928B7F2CD004E033F /* MainTabBarViewController.swift */; };
@@ -35,6 +34,9 @@
 		CE83318728B57B6300D8E9EE /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318628B57B6300D8E9EE /* Components.swift */; };
 		CE83318928B587DD00D8E9EE /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318828B587DD00D8E9EE /* UIFont.swift */; };
 		CE83318D28B7C03200D8E9EE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE83318C28B7C03200D8E9EE /* SignInView.swift */; };
+		CE84E4FB29200FEC009778C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE84E4FA29200FEC009778C2 /* GoogleService-Info.plist */; };
+		CE84E4FD292173E2009778C2 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84E4FC292173E2009778C2 /* SignInViewModel.swift */; };
+		CEF3E9F22922DF070044A386 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E9F12922DF070044A386 /* Cache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +44,6 @@
 		2AADBD332901302023BE4131 /* Pods_TwitterCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87088F28243A28897E7EB9EE /* Pods-TwitterCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterCloneApp.release.xcconfig"; path = "Target Support Files/Pods-TwitterCloneApp/Pods-TwitterCloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		CE42E07028F07F0F00F47C61 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		CE42E07628F7568C00F47C61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE42E07928F8CB7200F47C61 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		CE42E07B28F8CB7F00F47C61 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		CE7A57E928B7F2CD004E033F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +72,10 @@
 		CE83318628B57B6300D8E9EE /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		CE83318828B587DD00D8E9EE /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CE83318C28B7C03200D8E9EE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CE84E4FA29200FEC009778C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE84E4FC292173E2009778C2 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		CEF3E9F02922D8F10044A386 /* TwitterCloneApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwitterCloneApp.entitlements; sourceTree = "<group>"; };
+		CEF3E9F12922DF070044A386 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,19 +169,16 @@
 		CE83313428AC510300D8E9EE /* TwitterCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				CEF3E9F02922D8F10044A386 /* TwitterCloneApp.entitlements */,
 				CE83317528B02F0A00D8E9EE /* Extensions */,
 				CE83314E28AC515F00D8E9EE /* Utils */,
-				CE83314D28AC515800D8E9EE /* API */,
-				CE83314C28AC515100D8E9EE /* Model */,
-				CE83314B28AC514900D8E9EE /* ViewModel */,
-				CE83314A28AC514500D8E9EE /* View */,
 				CE83314928AC513F00D8E9EE /* Controller */,
 				CE83313528AC510300D8E9EE /* AppDelegate.swift */,
 				CE83313728AC510300D8E9EE /* SceneDelegate.swift */,
 				CE83315128AC53E600D8E9EE /* Main.storyboard */,
 				CE83313E28AC510400D8E9EE /* Assets.xcassets */,
 				CE83314028AC510400D8E9EE /* LaunchScreen.storyboard */,
-				CE42E07628F7568C00F47C61 /* GoogleService-Info.plist */,
+				CE84E4FA29200FEC009778C2 /* GoogleService-Info.plist */,
 				CE83314328AC510400D8E9EE /* Info.plist */,
 			);
 			path = TwitterCloneApp;
@@ -195,40 +197,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CE83314A28AC514500D8E9EE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CE83314B28AC514900D8E9EE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		CE83314C28AC515100D8E9EE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CE83314D28AC515800D8E9EE /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		CE83314E28AC515F00D8E9EE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				CE83317828B0305100D8E9EE /* Localizables */,
 				CE83315B28AC5C1D00D8E9EE /* TwitterImages.swift */,
 				CE83318628B57B6300D8E9EE /* Components.swift */,
+				CEF3E9F12922DF070044A386 /* Cache.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -268,8 +243,9 @@
 		CE83318A28B7C00300D8E9EE /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				CE83318028B2B59D00D8E9EE /* SignInViewController.swift */,
 				CE83318C28B7C03200D8E9EE /* SignInView.swift */,
+				CE83318028B2B59D00D8E9EE /* SignInViewController.swift */,
+				CE84E4FC292173E2009778C2 /* SignInViewModel.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -354,9 +330,9 @@
 			files = (
 				CE83315228AC53E600D8E9EE /* Main.storyboard in Resources */,
 				CE83316F28B00D1600D8E9EE /* Localizable.strings in Resources */,
-				CE42E07728F7568C00F47C61 /* GoogleService-Info.plist in Resources */,
 				CE83314228AC510400D8E9EE /* LaunchScreen.storyboard in Resources */,
 				CE83313F28AC510400D8E9EE /* Assets.xcassets in Resources */,
+				CE84E4FB29200FEC009778C2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +389,7 @@
 				CE42E07A28F8CB7200F47C61 /* CreateAccountViewController.swift in Sources */,
 				CE83318128B2B59D00D8E9EE /* SignInViewController.swift in Sources */,
 				CE83317E28B2AD1300D8E9EE /* UIView.swift in Sources */,
+				CE84E4FD292173E2009778C2 /* SignInViewModel.swift in Sources */,
 				CE83317728B0304200D8E9EE /* LocalizablesEnum.swift in Sources */,
 				CE7A57EA28B7F2CD004E033F /* MainTabBarViewController.swift in Sources */,
 				CE83318528B42B2200D8E9EE /* Date.swift in Sources */,
@@ -431,6 +408,7 @@
 				CE83315A28AC56B500D8E9EE /* MessageViewController.swift in Sources */,
 				CE83318728B57B6300D8E9EE /* Components.swift in Sources */,
 				CE42E07128F07F0F00F47C61 /* LoginView.swift in Sources */,
+				CEF3E9F22922DF070044A386 /* Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TwitterCloneApp/TwitterCloneApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6GW567P6JY;
@@ -608,6 +587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TwitterCloneApp/TwitterCloneApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6GW567P6JY;

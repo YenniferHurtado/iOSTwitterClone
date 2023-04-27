@@ -12,11 +12,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = UINavigationController(
-            rootViewController: SignInViewController())
+        
+//        var controller = UIViewController()
+//        if UserDefaults.standard.value(forKey: Key.emailGoogle.rawValue) != nil {
+//            controller = MainTabBarViewController()
+//        } else {
+//            controller = SignInViewController()
+//        }
+        window?.rootViewController = UINavigationController(rootViewController: SignInViewController())
         window?.makeKeyAndVisible()
     }
 
